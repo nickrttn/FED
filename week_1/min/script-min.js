@@ -1,1 +1,0 @@
-$(document).ready(function(){$("#project:checked")&&console.log("It's checked")});
