@@ -92,7 +92,7 @@ input#project:checked, input#stagebedrijf:checked {
 input#project:checked ~ .project,
 input#stagebedrijf:checked ~ .stagebedrijf {
   opacity: 1;
-  max-height: 40em;
+  max-height: 50em;
   overflow: visible;
   margin-bottom: 0;
 }
