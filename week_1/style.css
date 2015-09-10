@@ -1,0 +1,105 @@
+label {
+  margin-left: .5em;
+  display: inline-block;
+  width: 6em;
+}
+
+textarea {
+  border: 1px solid #ccc;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 1.5em;
+}
+
+fieldset:nth-child(2) {
+  padding: 1em .5em;
+}
+
+fieldset:nth-child(2) label {
+  width: 8em;
+}
+
+fieldset:nth-child(2) label + textarea {
+  vertical-align: top;
+}
+
+fieldset:nth-child(2) textarea {
+  width: 22em;
+  padding: .75em .5em;
+  font-size: .7em;
+  font-family: sans-serif;
+  border: 1px solid #ccc;
+  height: 6em;
+}
+
+fieldset.project label,
+fieldset.stagebedrijf label {
+  width: 10em;
+}
+
+fieldset.project label + textarea,
+fieldset.stagebedrijf label + textarea {
+  vertical-align: top;
+}
+
+fieldset.project textarea,
+fieldset.stagebedrijf textarea {
+  width: 24.5em;
+  padding: .75em .5em;
+  font-size: .7em;
+  font-family: sans-serif;
+}
+
+fieldset.project fieldset,
+fieldset.stagebedrijf fieldset {
+  width: 27.25em;
+  margin-bottom: 0;
+}
+
+legend {
+  padding: 0 .5em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 1px;
+  color: #aaa;
+  font-weight: bold;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=date] {
+  width: 25em;
+  height: 2em;
+  padding-left: .5em;
+}
+
+.project, .stagebedrijf {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-bottom: -1.5em;
+  transition: all 200ms linear;
+}
+
+input#project:checked, input#stagebedrijf:checked {
+  margin-bottom: 1.5em;
+}
+
+input#project:checked ~ .project,
+input#stagebedrijf:checked ~ .stagebedrijf {
+  opacity: 1;
+  max-height: 40em;
+  overflow: visible;
+  margin-bottom: 0;
+}
+
+input[type=date]#looptijd-van,
+input[type=date]#looptijd-tot {
+  width: 9.5em;
+  height: 2em;
+  padding-left: .5em;
+}
