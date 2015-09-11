@@ -1,171 +1,171 @@
 <!doctype html>
-<html lang=nl>
+<html lang="nl">
 <head>
-  <meta charset=utf-8>
+  <meta charset="utf-8">
   <title>Aanmelden</title>
-  <link rel=stylesheet href=style.css>
+  <link rel="stylesheet" href=style.css>
 </head>
 <body>
   <h1>Aanmelden</h1>
   <p>Bent u geïnteresseerd in samenwerken met CMD Amsterdam? Dat kan!! Tijdens de opleiding werken studenten aan projecten voor echte opdrachtgevers. Ook lopen de studenten stage, in het tweede en afstudeerjaar.</p>
   <p><em>CMD Amsterdam zoekt altijd naar positieve verbindingen met de creatieve stad Amsterdam.</em></p>
-  <p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u <a href=#>contact</a> met ons op.</p>
+  <p>Voor het aanmelden van stageplekken of projecten kunt u onderstaand formulier invullen. Wij nemen zo nodig contact met u op nadat het formulier is verstuurd. Voor vragen of opmerkingen kunt u <a href="#">contact</a> met ons op.</p>
 
-  <form action= method=POST name=aanmelden>
+  <form action="" method="POST" name="aanmelden">
 
     <fieldset>
       <legend>Contactgegevens</legend>
       <p>
-        <label for=naam>Naam</label>
-        <input type=text id=naam name=naam placeholder="Vul je naam in.">
+        <label for="naam">Naam</label>
+        <input type="text" id="naam" name="naam" placeholder="Vul je naam in.">
       </p>
       <p>
-        <label for=bedrijf>Bedrijf</label>
-        <input type=text id=bedrijf name=bedrijf placeholder="Vul je bedrijfsnaam in.">
+        <label for="bedrijf">Bedrijf</label>
+        <input type="text" id="bedrijf" name="bedrijf" placeholder="Vul je bedrijfsnaam in.">
       </p>
       <p>
-        <label for=adres>Adres</label>
-        <input type=text id=adres name=adres placeholder="Vul je adres in.">
+        <label for="adres">Adres</label>
+        <input type="text" id="adres" name="adres" placeholder="Vul je adres in.">
       </p>
       <p>
-        <label for=postcode>Postcode</label>
-        <input type=text id=postcode name=postcode placeholder="Vul je postcode in. (Bijv. 2012 CL)" pattern=[1-9][0-9]{3}\s?[a-zA-Z]{2}>
+        <label for="postcode">Postcode</label>
+        <input type="text" id="postcode" name="postcode" placeholder="Vul je postcode in. (Bijv. 2012 CL)" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}">
       </p>
       <p>
-        <label for=plaats>Plaats</label>
-        <input type=text id=plaats name=plaats placeholder="Vul je woonplaats in.">
+        <label for="plaats">Plaats</label>
+        <input type="text" id="plaats" name="plaats" placeholder="Vul je woonplaats in.">
       </p>
       <p>
-        <label for=telefoonnummer>Telefoon</label>
-        <input type=tel id=telefoonnummer name=telefoonnummer placeholder="Vul je telefoonnummer in. (Bijv. +31612345678)" pattern=^(?:0|\(?\+31\)?\s?|0031\s?)[1-9](?:[\.\-\s]?\d\d){4}$>
+        <label for="telefoonnummer">Telefoon</label>
+        <input type="tel" id="telefoonnummer" name="telefoonnummer" placeholder="Vul je telefoonnummer in. (Bijv. +31612345678)" pattern="^(?:0|\(?\+31\)?\s?|0031\s?)[1-9](?:[\.\-\s]?\d\d){4}$">
       </p>
       <p>
-        <label for=email>Email</label>
-        <input type=email id=email name=email placeholder="Vul je e-mailadres in.">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Vul je e-mailadres in.">
       </p>
     </fieldset>
 
     <fieldset>
       <legend>Ik wil me aanmelden</legend>
 
-        <input type=radio name=aanmelding value=project id=project>
-        <label for=project>Voor een project</label>
+        <input type="radio" name="aanmelding" value="project" id="project">
+        <label for="project">Voor een project</label>
 
-        <input type=radio name=aanmelding value=stagebedrijf id=stagebedrijf>
-        <label for=stagebedrijf>Als stagebedrijf</label>
+        <input type="radio" name="aanmelding" value="stagebedrijf" id="stagebedrijf">
+        <label for="stagebedrijf">Als stagebedrijf</label>
 
-        <fieldset class=project>
+        <fieldset class="project">
           <legend>Project</legend>
           <p>
-            <label for=titel>Titel</label>
-            <input type=text id=titel name=titel placeholder="Vul de titel van het project in.">
+            <label for="titel">Titel</label>
+            <input type="text" id="titel" name="titel" placeholder="Vul de titel van het project in.">
           </p>
           <p>
-            <label for=opdracht>Opdrachtomschrijving</label>
-            <textarea id=opdracht name=opdracht placeholder="Omschrijf de opdracht voor de student."></textarea>
+            <label for="opdracht">Opdrachtomschrijving</label>
+            <textarea id="opdracht" name="opdracht" placeholder="Omschrijf de opdracht voor de student."></textarea>
           </p>
           <p>
-            <label for=doelgroep>Doelgroepomschrijving</label>
-            <textarea id=doelgroep name=doelgroep placeholder="Omschrijf de doelgroep van de opdracht."></textarea>
+            <label for="doelgroep">Doelgroepomschrijving</label>
+            <textarea id="doelgroep" name="doelgroep" placeholder="Omschrijf de doelgroep van de opdracht."></textarea>
           </p>
           <p>
-            <label for=doelstelling>Doelstelling / intentie van het project</label>
-            <textarea id=doelstelling name=doelstelling placeholder="Omschrijf de doelstelling van het project."></textarea>
+            <label for="doelstelling">Doelstelling / intentie van het project</label>
+            <textarea id="doelstelling" name="doelstelling" placeholder="Omschrijf de doelstelling van het project."></textarea>
           </p>
           <p>
             <label>Looptijd project</label>
             <span>van</span>
-            <input type=date id=looptijd-van name=looptijd placeholder=startdatum>
+            <input type="date" id="looptijd-van" name="looptijd-van" placeholder="startdatum">
             <span>tot</span>
-            <input type=date id=looptijd-tot name=looptijd placeholder=einddatum>
+            <input type="date" id="looptijd-tot" name="looptijd-tot" placeholder="einddatum">
           </p>
           <p>
-            <label for=deadline>Deadline</label>
-            <input type=date id=deadline name=deadline placeholder="Deadline van het project."></p>
+            <label for="deadline">Deadline</label>
+            <input type="date" id="deadline" name="deadline" placeholder="Deadline van het project."></p>
           <fieldset>
             <legend>Geschikt voor</legend>
             <p>
-              <input type=checkbox id=eerstejaars name=eerstejaars value=eerstejaars>
-              <label for=eerstejaars>Eerstejaars studenten</label>
+              <input type="checkbox" id="eerstejaars" name="eerstejaars" value="eerstejaars">
+              <label for="eerstejaars">Eerstejaars studenten</label>
             </p>
             <p>
-              <input type=checkbox id=tweedejaars name=tweedejaars value=tweedejaars>
-              <label for=tweedejaars>Tweedejaars studenten</label>
+              <input type="checkbox" id="tweedejaars" name="tweedejaars" value="tweedejaars">
+              <label for="tweedejaars">Tweedejaars studenten</label>
             </p>
             <p>
-              <input type=checkbox id=derdejaars name=derdejaars value=derdejaars>
-              <label for=derdejaars>Derdejaars studenten</label>
+              <input type="checkbox" id="derdejaars" name="derdejaars" value="derdejaars">
+              <label for="derdejaars">Derdejaars studenten</label>
             </p>
             <p>
-              <input type=checkbox id=afstudeerders name=afstudeerders value=afstudeerders>
-              <label for=afstudeerders>Afstuderende studenten</label>
+              <input type="checkbox" id="afstudeerders" name="afstudeerders" value="afstudeerders">
+              <label for="afstudeerders">Afstuderende studenten</label>
             </p>
             <p>
-              <input type=checkbox id=onbekend name=onbekend value=onbekend>
-              <label for=onbekend>Onbekend</label>
+              <input type="checkbox" id="onbekend" name="onbekend" value="onbekend">
+              <label for="onbekend">Onbekend</label>
             </p>
           </fieldset>
         </fieldset>
 
-        <fieldset class=stagebedrijf>
+        <fieldset class="stagebedrijf">
           <legend>Stage</legend>
           <p>
-            <label for=geschiktheid>Geschikt voor</label>
-            <select name=geschiktheid value=geschiktheid id=geschiktheid>
-              <option value=tweedejaars>Tweedejaars studenten</option>
-              <option value=afstudeerders>Afstuderende studenten</option>
-              <option value=onbekend>Onbekend</option>
+            <label for="geschiktheid">Geschikt voor</label>
+            <select name="geschiktheid" id="geschiktheid">
+              <option value="tweedejaars">Tweedejaars studenten</option>
+              <option value="afstudeerders">Afstuderende studenten</option>
+              <option value="onbekend">Onbekend</option>
             </select>
           </p>
+
+          <fieldset>
+            <legend>Hoe lang is de stage?</legend>
+            <input type="radio" value="10" name="10" id="10">
+            <label for="10">10 weken</label>
+            <input type="radio" value="20" name="20" id="20">
+            <label for="20">20 weken</label>
+          </fieldset>
+
           <p>
-            <fieldset>
-              <legend>Hoe lang is de stage?</legend>
-              <input type=radio value=10 name=10 id=10>
-              <label for=10>10 weken</label>
-              <input type=radio value=20 name=20 id=20>
-              <label for=20>20 weken</label>
-            </fieldset>
+            <label for="begindatum">Begin datum</label>
+            <input type="date" name="begindatum" id="begindatum" placeholder="Begindatum">
           </p>
           <p>
-            <label for=begindatum>Begin datum</label>
-            <input type=date name=begindatum id=begindatum placeholder=Begindatum>
+            <label for="stagewerkzaamheden">Beschrijving stagewerkzaamheden</label>
+            <textarea id="stagewerkzaamheden" name="stagewerkzaamheden" placeholder="Omschrijf de stagewerkzaamheden."></textarea>
           </p>
           <p>
-            <label for=stagewerkzaamheden>Beschrijving stagewerkzaamheden</label>
-            <textarea id=stagewerkzaamheden name=stagewerkzaamheden placeholder="Omschrijf de stagewerkzaamheden."></textarea>
+            <label for="bedrijfsnaam">Bedrijf</label>
+            <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" placeholder="Vul de bedrijfsnaam in.">
           </p>
           <p>
-            <label for=bedrijfsnaam>Bedrijf</label>
-            <input type=text id=bedrijfsnaam name=bedrijfsnaam placeholder="Vul de bedrijfsnaam in.">
+            <label for="adres-bedrijf">Adres</label>
+            <input type="text" id="adres-bedrijf" name="adres-bedrijf" placeholder="Vul het adres in.">
           </p>
           <p>
-            <label for=adres-bedrijf>Adres</label>
-            <input type=text id=adres-bedrijf name=adres-bedrijf placeholder="Vul het adres in.">
+            <label for="postcode-bedrijf">Postcode</label>
+            <input type="text" id="postcode-bedrijf" name="postcode-bedrijf" placeholder="Vul de postcode in. (Bijv. 2012 CL)" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}">
           </p>
           <p>
-            <label for=postcode-bedrijf>Postcode</label>
-            <input type=text id=postcode-bedrijf name=postcode-bedrijf placeholder="Vul de postcode in. (Bijv. 2012 CL)" pattern=[1-9][0-9]{3}\s?[a-zA-Z]{2}>
+            <label for="plaats-bedrijf">Plaats</label>
+            <input type="text" id="plaats-bedrijf" name="plaats-bedrijf" placeholder="Vul de plaats in.">
           </p>
           <p>
-            <label for=plaats-bedrijf>Plaats</label>
-            <input type=text id=plaats-bedrijf name=plaats-bedrijf placeholder="Vul de plaats in.">
+            <label for="sector-bedrijf">Sector</label>
+            <input type="text" id="sector-bedrijf" name="sector-bedrijf" placeholder="Vul de bedrijfssector in.">
           </p>
           <p>
-            <label for=sector-bedrijf>Sector</label>
-            <input type=text id=sector-bedrijf name=sector-bedrijf placeholder="Vul de bedrijfssector in.">
-          </p>
-          <p>
-            <label for=core-business>Core Business</label>
-            <textarea id=core-business name=core-business placeholder="Omschrijf de core business van het bedrijf."></textarea>
+            <label for="core-business">Core Business</label>
+            <textarea id="core-business" name="core-business" placeholder="Omschrijf de core business van het bedrijf."></textarea>
           </p>
         </fieldset>
         <p>
-          <label for=opmerking>Opmerkingen</label>
-          <textarea id=opmerking name=opmerking placeholder="Plaats hier eventuele opmerkingen."></textarea>
+          <label for="opmerking">Opmerkingen</label>
+          <textarea id="opmerking" name="opmerking" placeholder="Plaats hier eventuele opmerkingen."></textarea>
         </p>
     </fieldset>
 
-    <input type=submit value="Aanmelding versturen">
+    <input type="submit" value="Aanmelding versturen">
 
   </form>
 </body>
