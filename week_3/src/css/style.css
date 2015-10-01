@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  padding: 0; margin: 0;
+}
+
+body {
+  font-size: 1em;
+  font-family: 'Input Mono', Menlo, monospace;
+  line-height: 1.375em;
+  background: #eee;
+  color: #333;
+}
+
+h1 {
+  font-size: 1.9375em;
+  line-height: 1.419354838em;
+  margin-top: 1.41935484em;
+  margin-bottom: 0.70967742em;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5625em;
+  line-height: 1.76em;
+  margin-top: 1.76em;
+  margin-bottom: 0.88em;
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.1em;
+  margin-top: 1.1em;
+  margin-bottom: 1.1em;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.375em;
+  margin-top: 1.375em;
+  margin-bottom: 1.375em;
+}
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 1.375em;
+  margin-bottom: 1.375em;
+}
+
+a {
+  color: #ffcc01;
+  transition: all 400ms;
+}
+
+a:hover {
+  color: #000;
+}
+
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+b, strong, em, small, code {
+  line-height: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.to-profile a {
+  color: #777;
+}
+
+.to-profile a:hover {
+  color: #000;
+}
+

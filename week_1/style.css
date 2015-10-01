@@ -77,7 +77,7 @@ input[type=date] {
   padding-left: .5em;
 }
 
-.project, .stagebedrijf {
+input#project:not(:checked) ~ .project, input#project:not(:checked) ~ .stagebedrijf {
   opacity: 0;
   max-height: 0;
   overflow: hidden;

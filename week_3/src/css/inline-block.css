@@ -1,0 +1,30 @@
+body header {
+	margin-left: 1vw;
+}
+
+body > header,
+body > .related,
+body > aside > section {
+	display: inline-block;
+	max-width: 12vw;
+	vertical-align: top;
+	margin-right: 1vw;
+}
+
+body > aside {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+body > main {
+	display: inline-block;
+	max-width: 40vw;
+	vertical-align: top;
+}
+
+.related article > p,
+.related article > blockquote,
+.related article > footer {
+	display: none;
+}

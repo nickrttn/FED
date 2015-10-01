@@ -1,0 +1,70 @@
+.related {
+	overflow: hidden;
+	padding: 0 2em;
+}
+
+.related article {
+	float: left;
+	max-width: 47%;
+	height: 10em;
+	margin-right: 2%;
+	margin-bottom: 1em;
+}
+
+.related article header h3 {
+	margin-bottom: .5em;
+}
+
+.related article header p {
+	display: inline;
+	font-size: .75em;
+}
+
+.related article header p a {
+	color: #333;
+	transition: color 200ms;
+}
+
+.related article header p a:hover {
+	color: #ffcc01;
+}
+
+/* :: because I don't need IE8 support */
+.related article header p::before {
+	content: ' – ';
+}
+
+.related article header p:first-of-type::before {
+	content: '';
+}
+
+aside {
+	clear: left;
+}
+
+@media screen and (max-width: 80em) {
+	.related article {
+		height: 12em;
+	}
+}
+
+@media screen and (max-width: 72em) {
+	.related article {
+		height: 13em;
+	}fl
+}
+
+@media screen and (max-width: 50em) {
+	.related article {
+		height: 14em;
+	}
+}
+
+@media screen and (max-width: 47em) {
+	.related article {
+		height: auto;
+		max-width: 100%;
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+}

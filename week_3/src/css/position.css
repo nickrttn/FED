@@ -1,0 +1,27 @@
+/* Wat een hel, ik ga hier niet aan beginnen. Helaas. */
+
+.related {
+	position: relative;
+}
+
+.related article {
+	position: relative;
+	min-width: 18vw;
+}
+
+.related article:first-child {
+	top: 0;
+	left: 0;
+}
+
+.related article:nth-child(2) {
+	top: 0;
+	left: 2vw;
+}
+
+.related article > p,
+.related article > blockquote,
+.related article > footer {
+	display: none;
+}
+
