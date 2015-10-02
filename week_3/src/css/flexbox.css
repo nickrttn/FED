@@ -167,6 +167,10 @@ main form fieldset legend {
 	font-weight: 700;
 }
 
+main form fieldset fieldset legend {
+	font-weight: 300;
+}
+
 main form fieldset label {
 	display: flex;
 	align-items: center;
@@ -255,6 +259,22 @@ main form fieldset em {
 	padding-left: 1em;
 }
 
+.related article h4 ~ ul {
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.related article h4 ~ ul li {
+	flex-basis: 100%;
+}
+
+/* WHY IS THIS NOT WRAPPING FFS */
+.related article h4 ~ ul li a {
+	margin-right: 1em;
+	word-wrap: break-word;
+}
+
 aside article {
 	margin-bottom: 2.5em;
 }
@@ -294,6 +314,7 @@ aside section:nth-of-type(2) article > p {
 
 body > footer {
 	background-color: #b2b2b2;
+	font-size: .8em;
 }
 
 body > footer section h2 {
@@ -398,7 +419,7 @@ body > footer section h2 {
 	}
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 71.25rem) {
 	body {
 		flex-flow: row wrap;
 	}
@@ -412,18 +433,18 @@ body > footer section h2 {
 
 	@keyframes bounce {
 		0% {
-			transform: scale(.995);
+			transform: scale(.9);
 		}
 		50% {
-			transform: scale(1.005)
+			transform: scale(1.1)
 		}
 		100% {
-			transform: scale(.995);
+			transform: scale(.9);
 		}
 	}
 
 	body > header img {
-		animation: bounce 800ms infinite;
+		animation: bounce 1200ms infinite;
 		max-width: 100%;
 	}
 
@@ -454,7 +475,7 @@ body > footer section h2 {
 		background: #333;
 		font-size: .8em;
 		color: #eee;
-		padding: .5em 1.5em;
+		padding: .5em 1em;
 		transition: all 300ms ease-in;
 	}
 
@@ -488,7 +509,9 @@ body > footer section h2 {
 		order: 2;
 
 		display: flex;
-		flex-wrap: wrap;
+		flex-flow: row wrap;
+
+		margin-bottom: 3em;
 	}
 
 	.related h2 {
