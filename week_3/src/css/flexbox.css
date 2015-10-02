@@ -56,6 +56,10 @@ nav ul li a:focus, nav ul li a:active, nav ul li a:hover {
 	color: #ffcc01;
 }
 
+.visible {
+	display: block;
+}
+
 form {
 	display: flex;
 	flex-flow: row wrap;
@@ -269,14 +273,13 @@ main form fieldset em {
 	flex-basis: 100%;
 }
 
-/* WHY IS THIS NOT WRAPPING FFS */
 .related article h4 ~ ul li a {
 	margin-right: 1em;
-	word-wrap: break-word;
+	word-wrap: break-word; /* Lelijk, maar het werkt. */
 }
 
 aside article {
-	margin-bottom: 2.5em;
+	margin-bottom: 1em;
 }
 
 aside section:first-of-type article p time, 
@@ -428,7 +431,6 @@ body > footer section h2 {
 		flex-basis: 15%;
 		padding: 0 1em;
 		flex-flow: column nowrap;
-		align-self: stretch;
 	}
 
 	@keyframes bounce {

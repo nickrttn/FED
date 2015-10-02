@@ -9,13 +9,13 @@ var stage = document.getElementById('stage');
 
 function showForm() {
 	if (this.value === 'project') {
-		stage.style.display = 'none';
-		project.style.display = 'block';
+		stage.classList.remove = 'visible';
+		project.classList.add = 'visible';
 	} else if (this.value === 'stage') {
 		project.style.display = 'none';
 		stage.style.display = 'block';
 	} else {
-		console.log('You\'ve been messing with the code. Suit yourself. Donate to a charity of your choosing.');
+		console.log('You\'ve been messing with the code. Continue to jail, do not go past Start.');
 	}
 }
 
