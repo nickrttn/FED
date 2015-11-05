@@ -4,11 +4,14 @@
 }
 
 body {
-  font-size: 1em;
-  font-family: 'Input Sans', Menlo, monospace;
-  line-height: 1.375em;
-  background: #eee;
-  color: #333;
+    display: flex;
+    flex-flow: column nowrap; /* flex on a row and wrap items to the next row */
+    justify-content: space-between;
+
+    font-family: 'Input Sans', Menlo, monospace;
+    line-height: 1.375em;
+    background: #eee;
+    color: #333;
 }
 
 h1 {
@@ -20,64 +23,701 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5625em;
-  line-height: 1.76em;
-  margin-top: 1.76em;
-  margin-bottom: 0.88em;
+    font-size: 1.5625em;
+    line-height: 1.76em;
+    margin-top: 1.76em;
+    margin-bottom: 0.88em;
 }
 
 h3 {
-  font-size: 1.25em;
-  line-height: 1.1em;
-  margin-top: 1.1em;
-  margin-bottom: 1.1em;
+    font-size: 1.25em;
+    line-height: 1.1em;
+    margin-top: 1.1em;
+    margin-bottom: 1.1em;
 }
 
 h4 {
-  font-size: 1em;
-  line-height: 1.375em;
-  margin-top: 1.375em;
-  margin-bottom: 1.375em;
+    font-size: 1em;
+    line-height: 1.375em;
+    margin-top: 1.375em;
+    margin-bottom: 1.375em;
 }
 
 p, ul, ol, pre, table, blockquote {
-  margin-top: 1.375em;
-  margin-bottom: 1.375em;
+    margin-top: 1.375em;
+    margin-bottom: 1.375em;
 }
 
 a {
-  color: #ffcc01;
-  transition: all 400ms;
+    color: #ffcc01;
+    transition: all 400ms;
 }
 
 a:hover {
-  color: #000;
+    color: #000;
 }
 
 hr {
-  border: 1px solid;
-  margin: -1px 0;
+    border: 1px solid;
+    margin: -1px 0;
 }
 
 ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 b, strong, em, small, code {
-  line-height: 1;
+    line-height: 1;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+img, video {
+    max-width: 100%;
+    height: auto;
 }
 
 .to-profile a {
-  color: #777;
+    color: #777;
 }
 
 .to-profile a:hover {
-  color: #000;
+    color: #000;
 }
 
+body > header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 0 1em;
+    background: #ffcc01;
+    /*align-items: center;*/
+}
+
+body > header img {
+    order: -2;
+    margin: 1em 0 0;
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+body > header h1 {
+    display: none;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+body > header p {
+    font-size: .75em;
+    line-height: 1.375em;
+}
+
+body > header form {
+    flex-basis: 100%;
+}
+
+.to-profile {
+    flex-basis: 50%;
+    order: -1;
+    margin-bottom: 0;
+    padding-left: 4em;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    margin: 0 0 1em;
+}
+
+nav ul span {
+    background: #999999;
+    color: #fff;
+    margin: .25em .25em 0 0;
+    padding: .75em 1.5em;
+    cursor: pointer;
+}
+
+nav ul li.hide {
+    display: none;
+}
+
+nav ul li a {
+    display: block;
+    margin: .25em .25em 0 0;
+    padding: .75em 1.5em;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: all 200ms linear;
+}
+
+nav ul li a:focus, nav ul li a:active, nav ul li a:hover {
+    background: #222;
+    color: #ffcc01;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+form label {
+    margin-right: .5em;
+    flex-basis: 100%;
+}
+
+form input {
+    max-width: 17rem;
+    padding: 1em .5em;
+    font-family: 'Input Mono', Menlo, monospace;
+    margin: .5em .5em .5em 0;
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 4px;
+    transition: border 200ms;
+}
+
+form input:focus {
+    outline: none;
+    border: 1px solid #333;
+}
+
+form button, form input[type=submit] {
+    padding: 1em 2em;
+    background-color: #999;
+    color: #fff;
+    font-weight: 300;
+    border: 0;
+    border-radius: 4px;
+    font-family: 'Input Mono', Menlo, monospace;
+    transition: all 200ms;
+}
+
+form button:hover, 
+form button:focus, 
+form input[type=submit]:hover,
+form input[type=submit]:focus {
+  background-color: #e5b801;
+}
+
+main, .related, aside, body > footer {
+    padding: 0 .5em;
+}
+
+main article {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main article h1 {
+    display: inline-block;
+    border: 4px solid rgba(255, 204, 1, 0.4);
+    border-width: 0 0 4px 0;
+    line-height: .8em;
+    margin-bottom: 0;
+}
+
+main article p {
+    font-size: 0.875em;
+}
+
+main article header > p:first-of-type::first-letter {
+    font-size: 3em;
+    float: left;
+    line-height: .8em;
+    font-weight: 100;
+    padding: 7px 3px 0 2px;
+    text-shadow: .3em .3em 0 rgba(255, 204, 1, .167),
+                 .25em .25em 0 rgba(255, 204, 1, .34),
+                 .2em .2em 0 rgba(255, 204, 1, .5),
+                 .15em .15em 0 rgba(255, 204, 1, .67),
+                 .1em .1em 0 rgba(255, 204, 1, .83),
+                 .05em .05em 0 rgba(255, 204, 1, 1);
+}
+
+main article footer {
+    transform: scale(.8) translateX(-2em);
+    background-color: rgba(255, 204, 1, 0.4);
+    padding: 1em 2em;
+    order: 8;
+}
+
+main article footer a {
+    color: #333;
+    text-decoration: underline;
+}
+
+main form {
+    display: flex;
+
+}
+
+main form fieldset {
+    flex-basis: 100%;
+    padding: .5em 1em;
+    border: 1px solid #333;
+    margin-bottom: 1.5em;
+}
+
+main form fieldset legend {
+    padding: 0 1em;
+    font-weight: 700;
+}
+
+main form fieldset fieldset legend {
+    font-weight: 300;
+}
+
+main form fieldset label {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    margin: .5em 0 1em;
+    padding: 0 .5em 0 0;
+}
+
+main form #project:not(.visible),
+main form #stage:not(.visible) {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+main form fieldset input, main form fieldset textarea {
+    flex-basis: 75%;
+}
+
+main form fieldset input[type=radio],
+main form fieldset input[type=checkbox] {
+    flex-basis: 10%;
+}
+
+main form fieldset input[type=radio] ~ span {
+    flex-basis: 80%;
+}
+
+main form fieldset textarea {
+    min-height: 6em;
+}
+
+main form fieldset span {
+    flex-basis: 100%;
+}
+
+main form fieldset em {
+    flex-basis: 100%;
+    font-size: .75em;
+}
+
+.related h2 {
+    display: inline-block;
+    border: 4px solid #999;
+    border-width: 0 0 4px 0;
+    line-height: .8em;
+}
+
+.related article {
+    margin-bottom: 2.5em;
+}
+
+.related article p, aside article p {
+    font-size: .75em;
+    line-height: 1.375em;
+}
+
+.related article > p {
+    color: #333;
+}
+
+.related article header h3 {
+    margin-bottom: 0;
+}
+
+.related article header p {
+    color: #999;
+    font-size: .6em;
+    display: inline-block;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+.related article header p::before {
+    content: '• ';
+}
+
+.related article header p:first-of-type::before {
+    content: '';
+}
+
+.related article dl dt {
+    margin-top: .5em;
+    font-weight: 500;
+}
+
+.related article dl dd {
+    padding-left: 1em;
+}
+
+.related article h4 {
+    margin-bottom: 0;
+}
+
+.related article h4 ~ ul {
+    margin-top: 0em;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.related article h4 ~ ul li {
+    flex-basis: 100%;
+    font-size: 0.8em;
+}
+
+.related article h4 ~ ul li a {
+    word-wrap: break-word;
+}
+
+.related article h4 ~ ul li a[href$=pdf] {
+    background: url(../img/pdf.gif) no-repeat;
+    background-size: contain;
+    padding-left: 1.75em;
+}
+
+.related article h4 ~ ul li a[href$=vcf] {
+    background: url(../img/vcf.png) no-repeat;
+    background-size: contain;
+    padding-left: 2.25em;
+}
+
+.related article h4 ~ ul li a[href$=jpg] {
+    background: url(../img/jpg.png) no-repeat;
+    background-size: contain;
+    padding-left: 1.5em;
+}
+
+aside article {
+    margin-bottom: 1em;
+}
+
+aside section:first-of-type article p time, 
+aside section:first-of-type article p a {
+    color: #999;
+    display: block;
+    margin-bottom: .5em;
+}
+
+aside section:first-of-type article p a:last-of-type {
+    display: inline;
+    color: #ffcc01;
+}
+
+aside section:nth-of-type(2) article h3 {
+    margin-bottom: 0;
+}
+
+aside section:nth-of-type(2) article footer p {
+    color: #999;
+    margin-top: .5em;
+    margin-bottom: 0;
+}
+
+aside section:nth-of-type(2) article > p a:first-of-type {
+    display: block;
+    margin-bottom: .5em;
+    margin-top: 0;
+    color: #999;
+}
+
+aside section:nth-of-type(2) article > p {
+    margin-top: 0;
+}
+
+body > footer {
+    background-color: #b2b2b2;
+    font-size: .8em;
+}
+
+body > footer section h2 {
+    background-color: #eee;
+    display: inline-block;
+    padding: 0 .5em;
+    margin-bottom: .25em;
+}
+
+#sitemap ul {
+    display: flex;
+    margin-bottom: .5em;
+    flex-flow: row wrap;
+    list-style-type: none;
+}
+
+#sitemap ul li a {
+    color: #eee;
+}
+
+#sitemap ul li li a {
+    color: #333;
+    margin-left: .5em;
+}
+
+#contact p {
+    margin: 0.25em 0;
+}
+
+#search input[type=submit] {
+    background-color: #333;
+}
+
+@media screen and (min-width: 31.25em) {
+    body > header img {
+        max-width: 50%;
+    }
+    .related {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 1em;
+    }
+    .related h2 {
+        flex-basis: 100%;
+        border-bottom: 0;
+    }
+    .related article {
+        flex-basis: 50%;
+        padding: 0 .5em 0 0;
+        margin-bottom: 0;
+    }
+    aside {
+        padding: 0 1em;
+    }
+}
+
+@media screen and (min-width: 50em) {
+    body > header {
+        flex-flow: row wrap;
+    }
+    .to-profile {
+        order: -3;
+        flex-basis: 100%;
+        text-align: right;
+        padding-left: 0;
+    }
+    body > header img {
+        order: -2;
+        flex-basis: 50%;
+        height: auto;
+    }
+    body > header form {
+        order: -1;
+        flex-basis: 50%;
+        margin-top: 2em;
+        padding-left: 8em;
+        align-self: center;
+    }
+    main article {
+        padding-left: 1em;
+    }
+    aside section {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+    }
+    aside section h2 {
+        flex-basis: 100%;
+    }
+    aside section article {
+        flex-basis: 50%;
+    }
+    body > footer {
+        padding: 0 1em;
+    }
+}
+
+@media screen and (min-width: 77.5em) {
+    body {
+        flex-flow: row wrap;
+    }
+
+    body > header {
+        flex-basis: 15%;
+        padding: 0 1em;
+        flex-flow: column nowrap;
+    }
+
+    body > header .to-profile {
+        order: 10;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: scale(.9);
+        }
+        50% {
+            transform: scale(1.1)
+        }
+        100% {
+            transform: scale(.9);
+        }
+    }
+
+    body > header img {
+        animation: bounce 1200ms infinite;
+        max-width: 100%;
+    }
+
+    body > header form {
+        padding: 0;
+        order: 10;
+        align-self: flex-end;
+    }
+
+    nav {
+        margin-top: 1.5em;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flexbox;
+        flex-flow: column;
+    }
+
+    nav ul li {
+        margin-bottom: .1em;
+    }
+
+    nav ul li a {
+        display: inline-block;
+        width: 100%;
+        line-height: 3em;
+        background: #333;
+        font-size: .8em;
+        color: #eee;
+        padding: .5em 1.5em;
+        transition: all 300ms ease-in;
+    }
+
+    nav ul li a:hover {
+        background: #000;
+        transform: translateX(.5em);
+    }
+
+    body > main {
+        flex-basis: 50%;
+        padding: 0 1em;
+    }
+
+    body > aside {
+        flex-basis: 35%;
+        flex-flow: row wrap;
+        align-content: flex-start;
+    }
+
+    body > aside .hide {
+        display: none;
+    }
+
+    body > aside section {
+        padding: 0 1em;
+        flex-flow: column wrap;
+        flex-basis: 100%;
+    }
+
+    body > aside section article {
+        flex-basis: 100%;
+    }
+
+    main article ol {
+        margin-left: 3em;
+    }
+
+    .related {
+        padding-left: calc(15% + 1em);
+        padding-right: 35%;
+        flex-basis: 100%;
+        order: 2;
+
+        display: flex;
+        flex-flow: row wrap;
+
+        margin-bottom: 3em;
+    }
+
+    .related h2 {
+        flex-basis: 100%;
+    }
+
+    .related article {
+        flex-basis: 33.33%;
+        padding-right: 1em;
+    }
+
+    .related article header h3 {
+        margin-bottom: .5em;
+    }
+
+    .related article header p {
+        display: inline;
+        margin: 0;
+        font-size: .75em;
+    }
+
+    .related article header p::before {
+        content: ' – ';
+    }
+
+    .related article header p:first-of-type::before {
+        content: '';
+    }
+
+    .related article header a {
+        color: #333;
+        transition: color 400ms; 
+    }
+
+    .related article header a:hover {
+        color: #ffcc01;
+    }
+
+    body > aside {
+        display: flex;
+    }
+
+    body > footer {
+        flex-basis: 100%;
+        order: 3;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        padding: 0 2em;
+    }
+
+    footer section {
+        flex-basis: 20%;
+        padding: 0 1.5em;
+    }
+
+    #sitemap, footer #contact, footer #search {
+        flex-grow: 1;
+    }
+
+    footer #about {
+        flex-grow: 2;
+    }
+
+    footer #credits {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (min-width: 85em) {
+    body > aside section {
+        flex-basis: 50%;
+    }
+}
