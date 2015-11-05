@@ -1,6 +1,6 @@
 // JS wrapped in IIFE's (Immediately-invoked function expression) to protect scope
 
-(function foo(){
+(function(){
 
 	(function(){
 		//  Responsive disclosure helper function, aka BIG MESSY IF/ELSE statement. 
@@ -128,27 +128,5 @@
 	// 		links[i].setAttribute('data-type', ext);
 	// 	}
 	// })();
-
-	(function() {
-		var mededelingenArticles = document.querySelectorAll('aside section:first-of-type article');
-		var mededelingenHeading = document.querySelector('aside section:first-of-type h2 a');
-		
-		for (var i = 0; i < mededelingenArticles.length; i++) {
-			mededelingenArticles[i].classList.add('hide');
-		}
-
-		mededelingenHeading.addEventListener('click', function(e){
-			e.preventDefault();
-
-			for (var i = 0; i < mededelingenArticles.length; i++) {
-				if (mededelingenArticles[i].classList.contains('hide')) {
-					mededelingenArticles[i].classList.remove('hide');
-				} else {
-					mededelingenArticles[i].classList.add('hide');
-				}
-			}
-		});
-
-	})();
 
 })();
